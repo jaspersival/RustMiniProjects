@@ -1,4 +1,5 @@
 use clap::Parser;
+use std::str::FromStr;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -13,11 +14,26 @@ struct Args {
     currency_amount: f64,
 }
 
+#[derive(Debug, PartialEq)]
 enum Currency {
     EURO,
     DOLLAR,
     POUND,
     YEN,
+}
+
+impl FromStr for Currency {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "EURO" => Ok(Self::EURO),
+            "DOLLAR" => Ok(Self::DOLLAR),
+            "POUND" => Ok(Self::POUND),
+            "YEN" => Ok(Self::YEN),
+            _ => Err(()),
+        }
+    }
 }
 
 struct ExchangeRate {
@@ -54,9 +70,19 @@ fn get_exchange_rate(from_currency: &Currency, to_currency: &Currency) -> f64 {
 fn main() {
     let args = Args::parse();
     println!(
-        "Convert {} of {} to {}",
+        "Convert {} {} to {}",
         args.currency_amount, args.from_currency, args.to_currency
     );
+    let from_currency = Currency::from_str(&args.from_currency).unwrap();
+    let to_currency = Currency::from_str(&args.to_currency).unwrap();
+
+    let exchange_rate = get_exchange_rate(&from_currency, &to_currency);
+    let to_currency_amount = exchange_rate * args.currency_amount;
+
+    println!(
+        "Converted {} {:?} to {} {:?} for an exchange rate of {}",
+        args.currency_amount, from_currency, to_currency_amount, to_currency, exchange_rate
+    )
 }
 
 #[test]
