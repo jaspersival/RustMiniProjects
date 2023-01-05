@@ -3,8 +3,8 @@ List from http://www.cplusplus.com/forum/beginner/3473/
 
 
 ## Beginner
-1. [ ] Write a program which finds the factorial of a number entered by the user. (check for all conditions) (Beginner).
-2. [ ] Develop a program to convert currency X to currency Y and visa versa (beginner).
+1. [x] Write a program which finds the factorial of a number entered by the user. (check for all conditions) (Beginner).
+2. [x] Develop a program to convert currency X to currency Y and visa versa (beginner).
 3. [ ] Write a program that print out the following, user will input the top number:
 ```
 *****
@@ -27,10 +27,10 @@ List from http://www.cplusplus.com/forum/beginner/3473/
 *****
 *******
 ```
-6. [ ] Develop a program that uses a randomly generated number to select 1 of 3(or more)
+6. [x] Develop a program that uses a randomly generated number to select 1 of 3(or more)
 functions to show the user. (Beginner)
-7. [ ] Guessing game. Write a c++ game that asks the user to guess a number between 1 and a 100. If you guessed correctly, it will say you win. If your too high or too low it will also let you know. (Beginner)
-8. [ ] Create a program which generates Fibonacci series till a number 'n' where 'n' is entered by the user. For eg. if the user enters 10 then the output would be: 1 1 2 3 5 8 (Beginner)
+7. [x] Guessing game. Write a c++ game that asks the user to guess a number between 1 and a 100. If you guessed correctly, it will say you win. If your too high or too low it will also let you know. (Beginner)
+8. [x] Create a program which generates Fibonacci series till a number 'n' where 'n' is entered by the user. For eg. if the user enters 10 then the output would be: 1 1 2 3 5 8 (Beginner)
 9. [ ] Determine how many of the characters are vowels and how many are consonants in a given line of text. Also terminate the string when the input character encountered is other than the alphabets. (Beginner).
 10. [ ] Find the Fifth root of the sum of the squares of the first 100 ODD numbers only. (Beginner)
 11. [ ] Perform 4-letter WORD UNSCRAMBLING i.e. List all possible combinations of 4-letters in a word. Ex: The word 'TEST' can be unscrambled as TEST,TETS,TSET,TSTE,TTSE,TTES,etc. (Beginner)
@@ -38,7 +38,7 @@ functions to show the user. (Beginner)
 13. [ ] READ a line of text and WRITE it out BACKWARDS using RECURSIVE Function. (Beginner)
 14. [ ] Write a program to SWAP the contents of 3 variables without using the temporary (or extra) variables. (Beginner)
 15. [ ] Write a program which reverses the numerals in an integer, that is 326 becomes 623, etc.. (Beginner)
-16. [ ] The program will tell the user each time whether he guessed high or low. The user WINS the game when the number guessed is same as randomly generated number. (Beginner)
+16. [x] The program will tell the user each time whether he guessed high or low. The user WINS the game when the number guessed is same as randomly generated number. (Beginner)
 17. [ ] Write a program to simulate a simple calculator. It should accept two number from the user along with the required operation to be performed. Addition, Subtraction, Division and Multiplication are the basic operations that should be implemented. Feel free to implement the other operations (Beginner)
 18. [ ] Determine how much money is in a piggy bank that contains several 50 paise coins, 25 paise coins, 20 paise coins, 10 paise coins and 5 paise coins. Use the following values to test your program : Five 50 paise coins, Three 25 paise coins, Two 20 paise coins, One 10 paise coin and Fifteen 5 paise coins. (Beginner)
 19. [ ] Create a simple Palindrome checker program. The program should allow the user to enter a string and check whether the given string is a palindrome or not. Only digits and alphabets should be considered while checking for palindromes -- any other characters are to be ignored. (beginner)
