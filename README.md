@@ -13,19 +13,13 @@ List from http://www.cplusplus.com/forum/beginner/3473/
 **
 *
 ```
-4. [ ] Write a program that print out the following, user will input the bottom number: *
+4. [ ] Write a program that print out the following, user will input the bottom number: 
 ```
+*
 **
 ***
 ****
 ******
-```
-5. [ ] Write a program that pring out the following triangle, the user will input the bottom number:
-```
-*
-***
-*****
-*******
 ```
 6. [x] Develop a program that uses a randomly generated number to select 1 of 3(or more)
 functions to show the user. (Beginner)
