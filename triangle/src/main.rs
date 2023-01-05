@@ -1,17 +1,5 @@
-use clap::{ArgMatches, Parser};
+use clap::{ArgMatches};
 
-#[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
-struct Args {
-    ///Number of * elements in the top row
-    top_number: usize,
-}
-
-#[derive(clap::Subcommand)]
-enum Action {
-    Top,
-    Bottom
-}
 
 fn main() {
     let matches = build_cli();
