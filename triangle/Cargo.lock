@@ -216,7 +216,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "triangle_top_number"
+name = "triangle"
 version = "0.1.0"
 dependencies = [
  "clap",
