@@ -83,7 +83,7 @@ fn parse_string_with_floats_correctly() {
 
     let expected = vec![vec![1.0, 2.5, 3.2], vec![4.0, 5.0, 6.0]];
 
-    let result: Vec<Vec<f64>> = parse_matrix(user_input);
+    let result = parse_matrix::<f64>(user_input);
 
     assert_eq!(result, expected);
 }
