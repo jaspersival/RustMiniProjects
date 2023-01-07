@@ -87,3 +87,13 @@ fn parse_string_with_floats_correctly() {
 
     assert_eq!(result, expected);
 }
+#[test]
+fn parse_string_of_strings_correctly() {
+    let user_input = "[a, b, c; d, e, f]";
+
+    let expected = vec![vec!["a", "b", "c"], vec!["d", "e", "f"]];
+
+    let result = parse_matrix::<String>(user_input);
+
+    assert_eq!(result, expected);
+}
