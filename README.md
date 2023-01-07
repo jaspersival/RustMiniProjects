@@ -13,7 +13,7 @@ List from http://www.cplusplus.com/forum/beginner/3473/
 **
 *
 ```
-4. [ ] Write a program that print out the following, user will input the bottom number: 
+4. [x] Write a program that print out the following, user will input the bottom number: 
 ```
 *
 **
