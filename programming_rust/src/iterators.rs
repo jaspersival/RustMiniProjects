@@ -16,12 +16,12 @@ fn into_iterator_implementations() {
     dump(var);
 }
 
-struct MyIterator {
-    values: Vec<i32>,
+struct MyIterator<T> {
+    values: Vec<T>,
 }
 
-impl IntoIterator for MyIterator {
-    type Item = i32;
+impl<T> IntoIterator for MyIterator<T> {
+    type Item = T;
     type IntoIter = std::vec::IntoIter<Self::Item>;
 
     fn into_iter(self) -> Self::IntoIter {
@@ -33,6 +33,25 @@ impl IntoIterator for MyIterator {
 fn loop_over_own_iterator_with_integers() {
     let my_iterator = MyIterator {
         values: vec![1, 2, 3],
+    };
+    for i in my_iterator {
+        println!("{}", i);
+    }
+}
+
+#[test]
+fn loop_over_own_iterator_with_strings() {
+    let my_iterator = MyIterator {
+        values: vec!["foo", "bar", "baz"],
+    };
+    for i in my_iterator {
+        println!("{}", i);
+    }
+}
+#[test]
+fn loop_over_own_iterator_with_floats() {
+    let my_iterator = MyIterator {
+        values: vec![1.5, 2.0, 2.5],
     };
     for i in my_iterator {
         println!("{}", i);
