@@ -26,8 +26,7 @@ where
     <T as FromStr>::Err: fmt::Debug,
 {
     let trimmed_string = s.trim();
-    let matrix_string_without_brackets = trimmed_string.get(1..trimmed_string.len() - 1).unwrap();
-    matrix_string_without_brackets
+    trimmed_string
         .split(';')
         .map(|row| {
             row.split(',')
@@ -39,7 +38,7 @@ where
 
 #[test]
 fn parse_string_with_whitespace_between_rows_into_matrix_correctly() {
-    let user_input = "[1,2,3; 4,5,6]";
+    let user_input = "1,2,3; 4,5,6";
 
     let expected = vec![vec![1, 2, 3], vec![4, 5, 6]];
 
@@ -49,7 +48,7 @@ fn parse_string_with_whitespace_between_rows_into_matrix_correctly() {
 }
 #[test]
 fn parse_string_without_whitespace_between_rows_into_matrix_correctly() {
-    let user_input = "[1,2,3;4,5,6]";
+    let user_input = "1,2,3;4,5,6";
 
     let expected = vec![vec![1, 2, 3], vec![4, 5, 6]];
 
@@ -59,7 +58,7 @@ fn parse_string_without_whitespace_between_rows_into_matrix_correctly() {
 }
 #[test]
 fn parse_string_with_leading_space_correctly() {
-    let user_input = " [1,2,3;4,5,6]";
+    let user_input = " 1,2,3;4,5,6";
 
     let expected = vec![vec![1, 2, 3], vec![4, 5, 6]];
 
@@ -69,7 +68,7 @@ fn parse_string_with_leading_space_correctly() {
 }
 #[test]
 fn parse_string_with_trailing_space_correctly() {
-    let user_input = "[1,2,3;4,5,6] ";
+    let user_input = "1,2,3;4,5,6 ";
 
     let expected = vec![vec![1, 2, 3], vec![4, 5, 6]];
 
@@ -79,7 +78,7 @@ fn parse_string_with_trailing_space_correctly() {
 }
 #[test]
 fn parse_string_with_floats_correctly() {
-    let user_input = "[1.0,2.5,3.2;4,5,6] ";
+    let user_input = "1.0,2.5,3.2;4,5,6 ";
 
     let expected = vec![vec![1.0, 2.5, 3.2], vec![4.0, 5.0, 6.0]];
 
@@ -89,7 +88,7 @@ fn parse_string_with_floats_correctly() {
 }
 #[test]
 fn parse_string_of_strings_correctly() {
-    let user_input = "[a, b, c; d, e, f]";
+    let user_input = "a, b, c; d, e, f";
 
     let expected = vec![vec!["a", "b", "c"], vec!["d", "e", "f"]];
 
