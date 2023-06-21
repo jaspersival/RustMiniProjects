@@ -3,6 +3,8 @@ Write a program which performs addition, subtraction, multiplication of matrices
  both the matrices would be specified by the user (dynamic memory allocation required).
  Use of structure or a class to define the matrix would be a good idea. (Intermediate)
  */
+mod arithmetic;
+
 use std::fmt;
 use std::io;
 use std::str::FromStr;
