@@ -23,3 +23,14 @@ fn addition_of_matrices_works_correctly() {
     let result = add_matrix(&matrix1, &matrix2);
     assert_eq!(expected, result);
 }
+
+#[test]
+fn unequal_matrix_sizes_are_broadcasted_and_added() {
+    let matrix1 = vec![vec![1.0, 2.5, 3.2], vec![4.0, 5.0, 6.0]];
+    let matrix2 = vec![vec![1.0, 2.0, 3.0]];
+
+    let expected = vec![vec![2.0, 4.5, 6.2], vec![5.0, 7.0, 9.0]];
+
+    let result = add_matrix(&matrix1, &matrix2);
+    assert_eq!(expected, result);
+}
