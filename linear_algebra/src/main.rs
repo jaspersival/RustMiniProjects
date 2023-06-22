@@ -5,6 +5,8 @@ Write a program which performs addition, subtraction, multiplication of matrices
  */
 mod arithmetic;
 
+#[macro_use]
+extern crate approx;
 use std::fmt;
 use std::io;
 use std::str::FromStr;
