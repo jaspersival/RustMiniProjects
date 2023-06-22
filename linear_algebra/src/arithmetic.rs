@@ -3,7 +3,16 @@ fn add_matrix(matrix1: &Vec<Vec<f64>>, matrix2: &Vec<Vec<f64>>) -> Vec<Vec<f64>>
     let size_of_vector_in_matrix = matrix1[0].len();
     let mut added_matrix = vec![vec![0.0; size_of_vector_in_matrix]; size_of_matrix];
 
-    for ((i, vector_matrix1), vector_matrix2) in matrix1.iter().enumerate().zip(matrix2) {
+    let mut broadcasted_matrix2 = matrix2.clone();
+
+    println!("The length of matrix2 is {}", matrix2.len());
+    if matrix2.len() != size_of_matrix && matrix2.len() == 1 {
+        broadcasted_matrix2.resize(size_of_matrix, (*broadcasted_matrix2[0]).to_owned());
+        println!("The broadcasted_matrix 2 is {:?}", broadcasted_matrix2);
+    }
+
+    for ((i, vector_matrix1), vector_matrix2) in matrix1.iter().enumerate().zip(broadcasted_matrix2)
+    {
         for ((j, element_vector_matrix1), element_vector_matrix2) in
             vector_matrix1.iter().enumerate().zip(vector_matrix2)
         {
